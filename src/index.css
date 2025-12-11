@@ -1,0 +1,173 @@
+/* --- Global Styles & Body Reset --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f6f9; /* Light gray background */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Main Page Container (Centering) --- */
+.app-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- App Card Container --- */
+.app-container {
+  background-color: white;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* --- Input Form --- */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.input-field {
+  flex-grow: 1;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff; /* Blue focus color */
+}
+
+.add-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.add-button:disabled {
+  background-color: #763232;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* --- Task List and Items --- */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.task-text {
+  font-size: 1rem;
+  color: #333;
+  word-break: break-word;
+}
+
+/* Completed Task Styles */
+.task-item.completed {
+  background-color: #f8fff8; /* Very light green tint */
+  border-color: #e0f0e0;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* --- Checkbox --- */
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.checkbox.checked {
+  border-color: #28a745; /* Green */
+  background-color: #28a745;
+}
+
+/* --- Delete Button --- */
+.delete-button {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: color 0.2s, background-color 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button:hover {
+  color: #dc3545; /* Red */
+  background-color: #ffeaea;
+}
